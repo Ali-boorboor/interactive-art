@@ -1,0 +1,450 @@
+/* root */
+:root {
+  font-size: 16px;
+}
+/* fonts */
+@font-face {
+  font-family: "f-n";
+  src: url("../../fonts/ttnorms-fonts/TTNorms-Medium.otf") format("opentype");
+}
+@font-face {
+  font-family: "f-l";
+  src: url("../../fonts/ttnorms-fonts/TTNorms-Light.otf") format("opentype");
+}
+@font-face {
+  font-family: "f-i";
+  src: url("../../fonts/other-fonts/Times-new-roman-italic.ttf") format("truetype");
+}
+/* universal styles */
+* {
+  margin: 0;
+  padding: 0;
+  border: none;
+  outline: none;
+  text-decoration: none;
+  list-style: none;
+  box-sizing: border-box;
+  font-family: "f-n";
+  font-size: 1rem;
+}
+body {
+  max-width: 80rem;
+  padding: 2rem;
+  margin: 0 auto;
+}
+.black-titles {
+  margin-bottom: 2rem;
+  line-height: 2rem;
+  color: #081d43;
+  font-size: 2rem;
+  font-weight: 700;
+}
+.gray-titles {
+  color: #6c7890;
+  line-height: 1.8rem;
+  font-family: "f-l";
+  font-weight: 700;
+  text-transform: uppercase;
+  margin-bottom: 1rem;
+}
+.navigation-menu,
+.footer .copy-right,
+.footer .copy-right .menu,
+.footer .email-section,
+.footer .email-section .menu,
+.main .portfolio-section .portfolio-images,
+.main .comment-section .comment-logo,
+.main .comment-section .comment-persons,
+.main .comment-section .comment-card,
+.main .comment-section .comment-cards,
+.main .work-section .work-descriptions,
+.main .comment-section .work-descriptions,
+.header,
+.main .portfolio-section,
+.main .work-section,
+.main .comment-section,
+.header .menu,
+.main .portfolio-section .menu,
+.main .work-section .menu,
+.main .comment-section .menu,
+.navigation-menu .menu {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.navigation-menu .menu,
+.footer .copy-right .menu,
+.footer .email-section .menu,
+.header .menu,
+.main .portfolio-section .menu,
+.main .work-section .menu,
+.main .comment-section .menu {
+  gap: 1.5rem;
+}
+.navigation-menu .menu .logo,
+.footer .copy-right .menu .logo,
+.footer .email-section .menu .logo,
+.header .menu .logo,
+.main .portfolio-section .menu .logo,
+.main .work-section .menu .logo,
+.main .comment-section .menu .logo {
+  margin-right: 1rem;
+}
+.navigation-menu .menu .menu__item,
+.footer .copy-right .menu .menu__item,
+.footer .email-section .menu .menu__item,
+.header .menu .menu__item,
+.main .portfolio-section .menu .menu__item,
+.main .work-section .menu .menu__item,
+.main .comment-section .menu .menu__item,
+.header .menu .menu .menu__item,
+.navigation-menu .menu .menu__item::before,
+.footer .copy-right .menu .menu__item::before,
+.footer .email-section .menu .menu__item::before,
+.header .menu .menu__item::before,
+.main .portfolio-section .menu .menu__item::before,
+.main .work-section .menu .menu__item::before,
+.main .comment-section .menu .menu__item::before {
+  position: relative;
+  transition: all 0.5s linear;
+}
+.navigation-menu .menu .menu__item::before,
+.footer .copy-right .menu .menu__item::before,
+.footer .email-section .menu .menu__item::before,
+.header .menu .menu__item::before,
+.main .portfolio-section .menu .menu__item::before,
+.main .work-section .menu .menu__item::before,
+.main .comment-section .menu .menu__item::before {
+  content: "";
+  position: absolute;
+  bottom: -0.5rem;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 50%;
+  height: 0.2rem;
+  background-color: #87bc25;
+  opacity: 0;
+  visibility: hidden;
+}
+.navigation-menu .menu .menu__item:hover::before,
+.footer .copy-right .menu .menu__item:hover::before,
+.footer .email-section .menu .menu__item:hover::before,
+.header .menu .menu__item:hover::before,
+.main .portfolio-section .menu .menu__item:hover::before,
+.main .work-section .menu .menu__item:hover::before,
+.main .comment-section .menu .menu__item:hover::before {
+  visibility: visible;
+  opacity: 1;
+  width: 100%;
+}
+.navigation-menu .menu .menu__link,
+.footer .copy-right .menu .menu__link,
+.footer .email-section .menu .menu__link,
+.header .menu .menu__link,
+.main .portfolio-section .menu .menu__link,
+.main .work-section .menu .menu__link,
+.main .comment-section .menu .menu__link {
+  color: #081d43;
+}
+.navigation-menu .navigation-menu__button,
+.footer .copy-right .navigation-menu__button,
+.footer .email-section .navigation-menu__button,
+.header .navigation-menu__button,
+.main .portfolio-section .navigation-menu__button,
+.main .work-section .navigation-menu__button,
+.main .comment-section .navigation-menu__button {
+  transition: all 0.5s linear;
+  background-color: #0050c8;
+  padding: 0.8rem 1.5rem;
+  border-radius: 0.5rem;
+  min-width: 9rem;
+  text-align: center;
+}
+.navigation-menu .navigation-menu__button:hover,
+.footer .copy-right .navigation-menu__button:hover,
+.footer .email-section .navigation-menu__button:hover,
+.header .navigation-menu__button:hover,
+.main .portfolio-section .navigation-menu__button:hover,
+.main .work-section .navigation-menu__button:hover,
+.main .comment-section .navigation-menu__button:hover {
+  background-color: #87bc25;
+}
+.navigation-menu .navigation-menu__button .navigation-menu__btn-link,
+.footer .copy-right .navigation-menu__button .navigation-menu__btn-link,
+.footer .email-section .navigation-menu__button .navigation-menu__btn-link,
+.header .navigation-menu__button .navigation-menu__btn-link,
+.main .portfolio-section .navigation-menu__button .navigation-menu__btn-link,
+.main .work-section .navigation-menu__button .navigation-menu__btn-link,
+.main .comment-section .navigation-menu__button .navigation-menu__btn-link {
+  color: #fff;
+}
+.header,
+.main .portfolio-section,
+.main .work-section,
+.main .comment-section {
+  margin-top: 6.5rem;
+}
+.header .left-content,
+.main .portfolio-section .left-content,
+.main .work-section .left-content,
+.main .comment-section .left-content {
+  flex-basis: 50%;
+  max-width: 28rem;
+  border-left: 0.5rem solid #0050c8;
+  padding-left: 1rem;
+}
+.header .left-content .left-content__button:hover,
+.main .portfolio-section .left-content .left-content__button:hover,
+.main .work-section .left-content .left-content__button:hover,
+.main .comment-section .left-content .left-content__button:hover {
+  transform: scale(1.08);
+}
+.header .left-content .left-content__button--green,
+.main .portfolio-section .left-content .left-content__button--green,
+.main .work-section .left-content .left-content__button--green,
+.main .comment-section .left-content .left-content__button--green,
+.header .left-content .left-content__button--blue,
+.main .portfolio-section .left-content .left-content__button--blue,
+.main .work-section .left-content .left-content__button--blue,
+.main .comment-section .left-content .left-content__button--blue {
+  transition: all 0.5s linear;
+  background-color: #87bc25;
+  padding: 0.8rem 1.5rem;
+  border-radius: 0.5rem;
+  min-width: 9rem;
+  text-align: center;
+}
+.header .left-content .left-content__button--blue,
+.main .portfolio-section .left-content .left-content__button--blue,
+.main .work-section .left-content .left-content__button--blue,
+.main .comment-section .left-content .left-content__button--blue {
+  background-color: #0050c8;
+  margin-left: 1rem;
+}
+.header .left-content .left-content__link,
+.main .portfolio-section .left-content .left-content__link,
+.main .work-section .left-content .left-content__link,
+.main .comment-section .left-content .left-content__link {
+  color: #fff;
+}
+.header .right-content,
+.main .portfolio-section .right-content,
+.main .work-section .right-content,
+.main .comment-section .right-content {
+  flex-basis: 50%;
+  text-align: center;
+}
+.header .right-content .right-content__img,
+.main .portfolio-section .right-content .right-content__img,
+.main .work-section .right-content .right-content__img,
+.main .comment-section .right-content .right-content__img {
+  width: 100%;
+}
+.main {
+  margin-top: 8rem;
+}
+.main .work-section,
+.main .comment-section {
+  gap: 2rem;
+  flex-direction: column;
+}
+.main .work-section .work-titles,
+.main .comment-section .work-titles,
+.main .work-section .work-description,
+.main .comment-section .work-description {
+  text-align: center;
+}
+.main .work-section .work-titles .work-titles__topic,
+.main .comment-section .work-titles .work-titles__topic,
+.main .work-section .work-description .work-titles__topic,
+.main .comment-section .work-description .work-titles__topic {
+  font-size: 1.5rem;
+}
+.main .work-section .work-descriptions,
+.main .comment-section .work-descriptions {
+  gap: 2rem;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.main .work-section .work-description,
+.main .comment-section .work-description {
+  flex-basis: 30%;
+}
+.main .work-section .work-description .work-description__title,
+.main .comment-section .work-description .work-description__title {
+  font-size: 1rem;
+  margin-bottom: 1rem;
+  font-weight: 500;
+}
+.main .work-section .work-description .work-description__text,
+.main .comment-section .work-description .work-description__text {
+  font-weight: normal;
+}
+.main .work-section .work-image,
+.main .comment-section .work-image {
+  flex-basis: 40%;
+  text-align: center;
+}
+.main .work-section .work-image .work-image__img,
+.main .comment-section .work-image .work-image__img {
+  width: 100%;
+}
+.main .comment-section {
+  background-color: #0050c8;
+  border-top-right-radius: 3rem;
+  border-bottom-left-radius: 3rem;
+  padding: 3rem 5rem;
+}
+.main .comment-section .comment-titles {
+  text-align: center;
+}
+.main .comment-section .comment-titles .comment-titles__title,
+.main .comment-section .comment-titles .comment-titles__text {
+  font-size: 1.5rem;
+  color: #fff;
+}
+.main .comment-section .comment-titles .comment-titles__text {
+  font-size: 1rem;
+  line-height: 1.2rem;
+  font-weight: normal;
+}
+.main .comment-section .comment-cards {
+  gap: 1rem;
+}
+.main .comment-section .comment-card {
+  flex-basis: 33%;
+  flex-direction: column;
+  border: 0.1rem solid #000;
+  border-radius: 0.5rem;
+  padding: 1rem;
+  background-color: #fff;
+}
+.main .comment-section .comment-card .comment-card__text {
+  font-weight: normal;
+  font-family: "f-i";
+}
+.main .comment-section .comment-persons {
+  gap: 1rem;
+  border-top: 0.1rem solid #6c7890;
+  padding-top: 0.5rem;
+  width: 100%;
+}
+.main .comment-section .comment-logo {
+  gap: 4rem;
+}
+.main .portfolio-section {
+  flex-direction: column;
+}
+.main .portfolio-section .portfolio-titles {
+  text-align: center;
+}
+.main .portfolio-section .portfolio-titles .portfolio-titles__topic {
+  font-size: 1.5rem;
+  margin-bottom: 3rem;
+}
+.main .portfolio-section .portfolio-images {
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+.main .portfolio-section .portfolio-images .portfolio-images__img {
+  border-radius: 0.5rem;
+}
+.footer {
+  margin-top: 6rem;
+}
+.footer .email-section {
+  background-color: #0050c8;
+  border-top-right-radius: 2rem;
+  border-bottom-left-radius: 2rem;
+  min-height: 10rem;
+  padding: 2rem;
+}
+.footer .email-section .email-section__title {
+  font-size: 1.5rem;
+  color: #fff;
+  text-shadow: 0 0 0.5rem #000;
+  margin: 0;
+}
+.footer .email-section .input-wrapper {
+  width: 20rem;
+  border-radius: 0.5rem;
+  overflow: hidden;
+  box-shadow: 0 0 0.5rem 0.1rem #000;
+}
+.footer .email-section .email-section__input {
+  color: #6c7890;
+  width: 100%;
+  padding: 1rem;
+  font-size: 0.96rem;
+  caret-color: #2f5bea;
+}
+.footer .copy-right {
+  margin-top: 2rem;
+  flex-wrap: wrap;
+}
+.footer .copy-right .copy-right__text {
+  font-weight: normal;
+}
+/* media queries */
+@media screen and (max-width: 1100px) {
+  :root {
+    font-size: 14px;
+  }
+  .portfolio-images {
+    justify-content: center !important;
+  }
+}
+@media screen and (max-width: 970px) {
+  .comment-cards,
+  .portfolio-images,
+  .comment-logo {
+    justify-content: center !important;
+    flex-wrap: wrap !important;
+  }
+  .comment-card {
+    flex-basis: 40% !important;
+  }
+}
+@media screen and (max-width: 800px) {
+  :root {
+    font-size: 12px;
+  }
+  .header,
+  .main .work-section,
+  .main .comment-section,
+  .main .portfolio-section {
+    justify-content: center !important;
+    flex-wrap: wrap !important;
+    gap: 2rem !important;
+  }
+  .left-content,
+  .right-content {
+    flex-basis: 100% !important;
+    max-width: none !important;
+  }
+  .right-content__img,
+  .work-image__img,
+  .portfolio-images__img {
+    width: 70% !important;
+  }
+  .work-description,
+  .comment-card {
+    flex-basis: 100% !important;
+  }
+}
+@media screen and (max-width: 650px) {
+  .menu,
+  .navigation-menu__button {
+    display: none !important;
+  }
+  .comment-section,
+  .email-section {
+    padding: 1rem !important;
+  }
+  .email-section__title {
+    font-size: 1rem !important;
+  }
+  .comment-logo__img {
+    width: 20% !important;
+  }
+}
