@@ -14,3 +14,9 @@
   <li>SASS</li>
 </usedLanguage>
 ```
+## Preview 🖼️:
+<img src="https://github.com/Ali-boorboor/interactive-art/blob/master/Demo-main-page.png">
+<img src="https://github.com/Ali-boorboor/interactive-art/blob/master/Demo-main-page2.png">
+<img src="https://github.com/Ali-boorboor/interactive-art/blob/master/Demo-main-page3.png">
+<img src="https://github.com/Ali-boorboor/interactive-art/blob/master/Demo-main-page4.png">
+<img src="https://github.com/Ali-boorboor/interactive-art/blob/master/Demo-footer-page.png">
